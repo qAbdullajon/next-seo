@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: "/opengraph-image.png",
+        url: "https://next-seo-delta.vercel.app/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: "My Awesome Blog Preview",
