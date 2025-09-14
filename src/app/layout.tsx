@@ -16,19 +16,26 @@ export const metadata: Metadata = {
     google: "bD6I35SSxW4Rbx-GMqSHdA8ZkyZVKU6A_QsLNWOFEBM",
   },
   openGraph: {
+    title: "Generate Dynamic Open Graph and Twitter Images in Next.js",
+    description:
+      "A guide on how to optimize SEO with static and dynamic metatags using Next.js 13's new Metadata API.",
+    type: "article",
+    url: "https://cruip-tutorials-next.vercel.app/social-preview",
     images: [
       {
-        url: "https://next-seo-delta.vercel.app/opengraph-image.png",
-        width: 1200,
-        height: 630,
-        alt: "My Awesome Blog Preview",
+        url: "https://cruip-tutorials-next.vercel.app/api/og?title=Generate Dynamic Open Graph and Twitter Images in Next.js",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://next-seo-delta.vercel.app/opengraph-image.png"], // ✅ rasmni shu yerga qo‘shing
-  },
+    title: "Generate Dynamic Open Graph and Twitter Images in Next.js",
+    description:
+      "A guide on how to optimize SEO with static and dynamic metatags using Next.js 13's new Metadata API.",
+    images: [
+      "https://cruip-tutorials-next.vercel.app/api/og?title=Generate Dynamic Open Graph and Twitter Images in Next.js",
+    ],
+  }
 };
 
 export default function RootLayout({
