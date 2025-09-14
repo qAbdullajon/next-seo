@@ -14,7 +14,10 @@ export const metadata: Metadata = {
   description: "Come and read my awesome articles!",
   twitter: {
     card: "summary_large_image"
-  }
+  },
+  verification: {
+    google: "bD6I35SSxW4Rbx-GMqSHdA8ZkyZVKU6A_QsLNWOFEBM",
+  },
 };
 
 export default function RootLayout({
