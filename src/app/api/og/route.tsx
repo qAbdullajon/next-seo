@@ -1,4 +1,3 @@
-// app/api/og/route.tsx
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
@@ -15,37 +14,18 @@ export async function GET(request: Request) {
     return new ImageResponse(
       (
         <div
+          tw="h-full w-full flex flex-col align-start justify-center py-10 px-20"
           style={{
             backgroundImage:
-              "url(https://cruip-tutorials-next.vercel.app/social-card-bg.jpg)",
-            backgroundSize: "100% 100%",
-            height: "100%",
-            width: "100%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-            justifyContent: "center",
-            padding: "40px 80px",
+              "url(https://next-seo-delta.vercel.app/opengraph-image.png)",
+            backgroundSize: "cover",
           }}
         >
           <div
-            style={{
-              fontSize: 60,
-              fontWeight: 800,
-              letterSpacing: "-0.025em",
-              lineHeight: 1,
-              color: "white",
-              marginBottom: 24,
-              whiteSpace: "pre-wrap",
-            }}
+            tw="text-6xl font-extrabold text-white tracking-tight leading-none mb-6 whitespace-pre-wrap"
           >
             {title}
           </div>
-          <img
-            width="203"
-            height="44"
-            src="https://cruip-tutorials-next.vercel.app/author.png"
-          />
         </div>
       ),
       {
@@ -54,7 +34,7 @@ export async function GET(request: Request) {
       }
     );
   } catch (e: any) {
-    console.error(`${e.message}`);
+    console.log(`${e.message}`);
     return new Response(`Failed to generate the image`, {
       status: 500,
     });

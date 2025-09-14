@@ -1,41 +1,39 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
   title: {
     default: "My Awesome Blog",
-    template: "%s - My Awesome Blog"
+    template: "%s - My Awesome Blog",
   },
   description: "Come and read my awesome articles!",
   verification: {
     google: "bD6I35SSxW4Rbx-GMqSHdA8ZkyZVKU6A_QsLNWOFEBM",
   },
   openGraph: {
-    title: "Generate Dynamic Open Graph and Twitter Images in Next.js",
-    description:
-      "A guide on how to optimize SEO with static and dynamic metatags using Next.js 13's new Metadata API.",
-    type: "article",
-    url: "https://cruip-tutorials-next.vercel.app/social-preview",
+    title: "My Awesome Blog",
+    description: "Come and read my awesome articles!",
+    type: "website",
+    url: "https://next-seo-delta.vercel.app/",
     images: [
       {
-        url: "https://cruip-tutorials-next.vercel.app/api/og?title=Generate Dynamic Open Graph and Twitter Images in Next.js",
+        url: "https://next-seo-delta.vercel.app/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "My Awesome Blog Preview",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Generate Dynamic Open Graph and Twitter Images in Next.js",
-    description:
-      "A guide on how to optimize SEO with static and dynamic metatags using Next.js 13's new Metadata API.",
+    title: "My Awesome Blog",
+    description: "Come and read my awesome articles!",
     images: [
-      "https://cruip-tutorials-next.vercel.app/api/og?title=Generate Dynamic Open Graph and Twitter Images in Next.js",
+      "https://next-seo-delta.vercel.app/opengraph-image.png",
     ],
-  }
+  },
 };
 
 export default function RootLayout({
@@ -45,7 +43,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <Header />
         <main className="p-5">{children}</main>
         <Footer />
