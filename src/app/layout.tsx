@@ -18,6 +18,17 @@ export const metadata: Metadata = {
   verification: {
     google: "bD6I35SSxW4Rbx-GMqSHdA8ZkyZVKU6A_QsLNWOFEBM",
   },
+  openGraph: {
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "My Awesome Blog Preview",
+      },
+    ],
+  },
+
 };
 
 export default function RootLayout({

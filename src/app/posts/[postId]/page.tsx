@@ -23,13 +23,6 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.body,
-    // openGraph: {
-    //   images: [
-    //     {
-    //       url: post.imageUrl
-    //     }
-    //   ]
-    // }
   }
 }
 
