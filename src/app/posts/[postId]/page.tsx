@@ -38,8 +38,9 @@ export default async function BlogPostPage({
 }: BlogPostPageProps) {
   const response = await fetch(`https://dummyjson.com/posts/${postId}`);
   const { title, body }: BlogPost = await response.json();
+  console.log(response);
 
-  if (response.status === 404) {
+  if (response.status == 404) {
     notFound()
   }
   await delay(1000);
