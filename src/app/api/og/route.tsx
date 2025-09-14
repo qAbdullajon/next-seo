@@ -1,12 +1,9 @@
+// app/api/og/route.tsx
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
 export async function GET(request: Request) {
-  const interExtrabold = fetch(
-    new URL("../../../public/Inter-ExtraBold.ttf", import.meta.url)
-  ).then((res) => res.arrayBuffer());
-
   try {
     const { searchParams } = new URL(request.url);
 
@@ -28,7 +25,6 @@ export async function GET(request: Request) {
             flexDirection: "column",
             alignItems: "flex-start",
             justifyContent: "center",
-            fontFamily: "Inter",
             padding: "40px 80px",
           }}
         >
@@ -48,25 +44,17 @@ export async function GET(request: Request) {
           <img
             width="203"
             height="44"
-            src={`https://cruip-tutorials-next.vercel.app/author.png`}
+            src="https://cruip-tutorials-next.vercel.app/author.png"
           />
         </div>
       ),
       {
         width: 1200,
         height: 630,
-        fonts: [
-          {
-            name: "Inter",
-            data: await interExtrabold,
-            style: "normal",
-            weight: 800,
-          },
-        ],
       }
     );
   } catch (e: any) {
-    console.log(`${e.message}`);
+    console.error(`${e.message}`);
     return new Response(`Failed to generate the image`, {
       status: 500,
     });
